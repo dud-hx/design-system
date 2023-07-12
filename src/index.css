@@ -1,3 +1,23 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer components {
+    .btn {
+        @apply justify-start items-start gap-2 inline-flex;
+    }
+
+    .btn--sm {
+        @apply w-12 h-7 px-2 py-1.5 rounded text-xs
+    }
+
+    .btn--md {
+        @apply w-16 h-9 px-3 py-2 rounded-md text-sm
+    }
+
+    .btn--lg {
+        @apply w-20 h-11 px-3.5 py-2.5 rounded-lg text-base
+    }
+
+
+}

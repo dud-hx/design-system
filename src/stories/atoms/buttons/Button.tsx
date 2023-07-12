@@ -1,14 +1,23 @@
-import React from 'react';
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+import React from "react";
+import { ModeType, SizeType, VariantType } from "../../../types/types";
+import { getBtnStyle, getSize } from "./utils";
 
 interface ButtonProps {
   /**
-   * Is this the principal call to action on the page?
+   * The variant  of the button.
+   * There are 4 variants: 'contained' | 'outlined' | 'text' | 'link'
    */
-  primary?: boolean;
+  variant?: VariantType;
   /**
-   * How large should the button be?
+   * How large should the button be. The available sizes are: 'sm' | 'md' | 'lg';
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: SizeType;
+  /**
+   * The mode of the  button , this affects the bg color of the button.
+   * There are 3 options:'primary' | 'secondary' | 'neutral'
+   */
+  mode?: ModeType;
   /**
    * Button contents
    */
@@ -23,20 +32,16 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
-  size = 'medium',
+  variant = "contained",
+  mode = "primary",
+  size = "md",
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'bg-cyan-600' : 'bg-orange-600';
-  const space = size === "small" ? "px-4 text-sm" :
-    size === "medium" ? "px-6" : "px-8"
   return (
     <button
       type="button"
-      className={['text-white py-2',
-        space, mode].join(' ')}
-
+      className={`btn ${getSize[size]} ${getBtnStyle(variant, mode)}`}
       {...props}
     >
       {label}
