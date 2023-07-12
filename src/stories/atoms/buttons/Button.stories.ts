@@ -17,34 +17,71 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 
 
-export const Contained: Story = {
+export const Default: Story = {
   args: {
-    variant: 'contained',
-    size: "sm",
-    mode: 'primary',
-    label: 'Button',
+    label: "Default Button",
   },
 };
+export const Contained: Story = {
+  args: {
+    variant: "contained",
+    label: "Contained Button",
+  }
+}
 
 export const Outlined: Story = {
   args: {
-    ...Contained.args,
-    variant: 'outlined'
+    variant: "outlined",
+    label: "Outlined Button",
   },
 };
 
 export const Text: Story = {
   args: {
-    ...Contained.args,
-    variant: 'text',
+    variant: "text",
+    label: "Text Button",
 
   },
 };
 
 export const Link: Story = {
   args: {
-    ...Contained.args,
-    variant: 'link',
-
+    variant: "link",
+    label: "Link Button",
   },
 };
+
+export const SmallSize: Story = {
+  args: {
+    size: "sm",
+    label: "Small Button",
+  }
+}
+
+export const LargeSize: Story = {
+  args: {
+    size: "lg",
+    label: "Large Button",
+  }
+}
+
+export const SecondaryMode: Story = {
+  args: {
+    mode: "secondary",
+    label: "Secondary Button",
+  }
+}
+
+export const NeutralMode: Story = {
+  args: {
+    mode: "neutral",
+    label: "Neutral Button",
+  }
+}
+
+export const ButtonWithClickHandler: Story = {
+  args: {
+    label: "Clickable Button",
+    onClick: () => console.log("Button clicked"),
+  }
+}

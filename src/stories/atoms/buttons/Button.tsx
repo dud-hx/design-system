@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import React from "react";
 import { ModeType, SizeType, VariantType } from "../../../types/types";
-import { getBtnStyle, getSize } from "./utils";
+import { getBtnStyle, getSize } from "../../utils/buttonUtil";
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * The variant  of the button.
    * There are 4 variants: 'contained' | 'outlined' | 'text' | 'link'
@@ -31,14 +31,14 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+export const Button: React.FC<ButtonProps> = ({
   variant = "contained",
   mode = "primary",
   size = "md",
   label,
   onClick = () => {},
   ...props
-}: ButtonProps) => {
+}) => {
   return (
     <button
       type="button"

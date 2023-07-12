@@ -17,29 +17,57 @@ type Story = StoryObj<typeof meta>;
 
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+export const SmallInitialAvatar: Story = {
+  args: {
+    content: 'AI',
+    type: 'initial',
+    size: 'sm',
+    mode: 'round',
+  }
+}
 
-export const AvatarSmall: Story = {
+export const MediumInitialAvatar: Story = {
+  args: {
+    content: 'AI',
+    type: 'initial',
+    size: 'md',
+    mode: 'round',
+  }
+}
+
+export const LargeInitialAvatar: Story = {
+  args: {
+    content: 'AI',
+    type: 'initial',
+    size: 'lg',
+    mode: 'round',
+  }
+}
+
+export const SmallImageAvatar: Story = {
   args: {
     content: avatar_svg,
-    type: "image",
+    type: 'image',
     size: 'sm',
-    mode: 'square'
-  },
-};
+    mode: 'round',
+  }
+}
 
-
-export const AvatarMedium: Story = {
+export const MediumImageAvatar: Story = {
   args: {
-    content: "DH",
-    type: "initial",
-    size: 'md'
-  },
-};
+    content: avatar_svg,
+    type: 'image',
+    size: 'md',
+    mode: 'round',
+  }
+}
 
-export const AvatarLarge: Story = {
+export const LargeImageAvatar: Story = {
   args: {
-    content: "DH",
-    type: "initial",
-    size: 'lg'
-  },
-};
+    content: avatar_svg,
+    type: 'image',
+    size: 'lg',
+    mode: 'round',
+  }
+}
+

@@ -53,12 +53,15 @@
     "@storybook/addon-links": "^7.0.26",
     "@storybook/blocks": "^7.0.26",
     "@storybook/preset-create-react-app": "^7.0.26",
-    "@storybook/react": "^7.0.26",
+    "@storybook/react": "^7.0.27",
     "@storybook/react-webpack5": "^7.0.26",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "babel-jest": "^29.6.1",
     "babel-plugin-named-exports-order": "^0.0.2",
     "eslint-plugin-storybook": "^0.6.12",
+    "jest": "^27.5.1",
     "prop-types": "^15.8.1",
+    "react-test-renderer": "^18.2.0",
     "storybook": "^7.0.26",
     "webpack": "^5.88.1"
   }

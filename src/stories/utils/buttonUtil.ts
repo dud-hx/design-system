@@ -1,4 +1,4 @@
-import { ModeType, VariantType } from "../../../types/types";
+import { ModeType, VariantType } from "../../types/types";
 
 export const containedStyle = {
     primary: "bg-indigo-700",
@@ -18,9 +18,9 @@ export const textStyle = {
 };
 
 export const linkStyle = {
-    primary: "w-9 h-4 text-indigo-700",
-    secondary: "w-10 h-5 text-blue-900 underline",
-    neutral: "w-12 h6 text-slate-400",
+    primary: "h-4 text-indigo-700",
+    secondary: "h-5 text-blue-900 underline",
+    neutral: "h6 text-slate-400",
 };
 export const getBtnStyle = (variant: VariantType, mode: ModeType) => {
     switch (variant) {
