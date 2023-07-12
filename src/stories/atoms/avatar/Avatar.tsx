@@ -21,7 +21,7 @@ interface AvatarProps {
    */
   mode?: "round" | "square";
 }
-export const Avatar = ({
+const Avatar = ({
   content,
   type = "initial",
   size = "sm",
@@ -58,3 +58,5 @@ export const Avatar = ({
     </div>
   );
 };
+
+export default Avatar;

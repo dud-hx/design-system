@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Avatar } from './Avatar';
+import Avatar from './Avatar';
 import avatar_svg from "../../assets/avatar.jpg"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
