@@ -36,12 +36,14 @@ export const Button = ({
   mode = "primary",
   size = "md",
   label,
+  onClick = () => {},
   ...props
 }: ButtonProps) => {
   return (
     <button
       type="button"
       className={`btn ${getSize[size]} ${getBtnStyle(variant, mode)}`}
+      onClick={onClick}
       {...props}
     >
       {label}
