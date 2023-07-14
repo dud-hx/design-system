@@ -42,3 +42,9 @@ export const getSize = {
     md: "btn--md",
     lg: "btn--lg",
 };
+
+export const getIconSize = {
+    sm: "w-7 h-7 p-1.5 rounded-2xl",
+    md: " w-9 h-9 p2 rounded-3xl",
+    lg: "w-11 h-11 p-2.5 rounded-3xl",
+}

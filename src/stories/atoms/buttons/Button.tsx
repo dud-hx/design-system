@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
-import React from "react";
+import React, { ReactNode } from "react";
 import { ModeType, SizeType, VariantType } from "../../../types/types";
-import { getBtnStyle, getSize } from "../../utils/buttonUtil";
+import { getBtnStyle, getIconSize, getSize } from "../../utils/buttonUtil";
+import { HomeIcon } from "@heroicons/react/24/solid";
 
 export interface ButtonProps {
   /**
@@ -21,11 +22,15 @@ export interface ButtonProps {
   /**
    * Button contents
    */
-  label: string;
+  label?: ReactNode;
   /**
    * Optional click handler
    */
   onClick?: () => void;
+  /**
+   * To use the button as an icon button set this to true
+   */
+  isIcon?: boolean;
 }
 
 /**
@@ -37,16 +42,19 @@ const Button: React.FC<ButtonProps> = ({
   size = "md",
   label,
   onClick = () => {},
+  isIcon = false,
   ...props
 }) => {
   return (
     <button
       type="button"
-      className={`btn ${getSize[size]} ${getBtnStyle(variant, mode)}`}
+      className={`btn ${
+        isIcon ? getIconSize[size] : getSize[size]
+      } ${getBtnStyle(variant, mode)}`}
       onClick={onClick}
       {...props}
     >
-      {label}
+      {isIcon && !label ? <HomeIcon className="w-4 h-4" /> : label}
     </button>
   );
 };

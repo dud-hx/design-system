@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import Button from './Button';
+import { BeakerIcon } from '@heroicons/react/24/solid'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -83,5 +83,11 @@ export const ButtonWithClickHandler: Story = {
   args: {
     label: "Clickable Button",
     onClick: () => console.log("Button clicked"),
+  }
+}
+export const Icon: Story = {
+  args: {
+    variant: "contained",
+    isIcon: true,
   }
 }

@@ -4,7 +4,7 @@
 
 @layer components {
     .btn {
-        @apply justify-start items-start gap-2 inline-flex w-fit;
+        @apply justify-center items-center gap-2 inline-flex w-fit;
     }
 
     .btn--sm {
