@@ -1,6 +1,6 @@
 import React from "react";
-import { InputAtom } from "./InputAtom";
-import Label from "../label/Label";
+import Label from "../../label/Label";
+import { InputAtom } from "../InputAtom";
 interface CheckboxProps {
   /**
    * Label content.

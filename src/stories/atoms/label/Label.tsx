@@ -6,15 +6,20 @@ interface LabelProps {
   /**
    * Label content.
    */
-  text: string;
+  text?: string;
+  /**
+   * To add style
+   */
+  className?: string;
+  [x: string]: any; // This allows any additional property
 }
 
 /**
  * Primary UI component for user interaction.
  */
-const Label = ({ size = "sm", text, ...props }: LabelProps) => {
+const Label = ({ size = "sm", text, className, ...props }: LabelProps) => {
   return (
-    <p className={`text-${size}`} {...props}>
+    <p className={`text-${size} ${className}`} {...props}>
       {text}
     </p>
   );

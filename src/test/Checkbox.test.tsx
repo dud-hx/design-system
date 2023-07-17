@@ -2,7 +2,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Checkbox from "../stories/atoms/input/Checkbox";
+import Checkbox from "../stories/atoms/input/checkbox/Checkbox";
 
 describe("<Checkbox />", () => {
   it("renders without crashing", () => {

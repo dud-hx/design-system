@@ -1,6 +1,8 @@
 import React from "react";
+import { SizeType } from "../../../types/types";
 
 interface InputAtomProps {
+  size?: string;
   /**
    *what type the input should be?
    */
@@ -28,12 +30,8 @@ interface InputAtomProps {
    * Optional onchange handler
    */
   onChange?: () => void;
-
-  /**
-   * The mode of the checkbox  'primary' | 'disabled'. By default is primary.
-   */
-
   [x: string]: any; // This allows any additional property
+  className?: string;
 }
 
 /**
@@ -43,14 +41,16 @@ export const InputAtom = ({
   type = "text",
   value,
   onChange,
+  size,
+  className,
   ...props
 }: InputAtomProps) => {
   return (
     <input
       value={value}
       type={type}
-      className={`border cursor-pointer border-gray-300 px-2 py-1
-       rounded-md  focus:outline-indigo-700`}
+      className={`bg-white border-stone-300  ${className} border cursor-pointer
+       rounded-md  focus:outline-indigo-700 ${size}`}
       onChange={onChange}
       {...props}
     />
