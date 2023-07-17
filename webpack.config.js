@@ -4,8 +4,8 @@ module.exports = {
   entry: './src/index.ts', // point to the main TypeScript file instead of JavaScript
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'design-system.js',
-    library: 'designSystem',
+    filename: 'design-system-dx.js',
+    library: 'designSystemDx',
     libraryTarget: 'umd',
     globalObject: 'this',
     umdNamedDefine: true

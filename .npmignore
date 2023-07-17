@@ -1,0 +1,13 @@
+# Ignore the following directories:
+node_modules
+dist
+coverage
+.idea
+.vscode
+
+# Ignore the following files:
+*.log
+.npmrc
+.travis.yml
+Dockerfile
+webpack.config.js
